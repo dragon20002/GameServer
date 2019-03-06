@@ -6,7 +6,9 @@ Thread::Thread(thread_t *thread, wstr_t name)
 {
 	name_ = name;
 	thread_ = thread;
-	id_ = thread_->get_id().hash();
+
+	hash<thread::id> hash;
+	id_ = hash(thread_->get_id());
 
 	ThreadManager::getInstance().put(this);
 }

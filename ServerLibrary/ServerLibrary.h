@@ -106,4 +106,4 @@ typedef void (*Function)(void *);
 //#include "./Database/DBManager.h"
 
 // 전역변수
-//#include "Shutdown.h"
+#include <Shutdown.h>

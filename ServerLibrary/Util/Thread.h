@@ -5,7 +5,12 @@
 
 #define MAKE_THREAD(className, process) (new Thread(new thread_t(&className##::##process, this), L#className))
 
-#define GET_CURRENT_THREAD_ID std::this_thread::get_id().hash //이게 맞는지...
+//#define GET_CURRENT_THREAD_ID (size_t) (std::this_thread::get_id) //이게 맞는지...
+inline size_t GET_CURRENT_THREAD_ID()
+{
+	hash<thread::id> hash;
+	return (size_t)hash(std::this_thread::get_id());
+}
 
 class Lock;
 typedef std::function<void(void*)> ThreadFunction;
