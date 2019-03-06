@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Util">
+      <UniqueIdentifier>{1358b8fb-4e52-4e84-b064-7aa8c85f8834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Util">
+      <UniqueIdentifier>{5e04e256-1db4-496a-94fa-8b428373e917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Util\tinyXml">
+      <UniqueIdentifier>{210472cc-57e8-4ad8-b2b1-2ad9e2c0c3a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Util\tinyXml">
+      <UniqueIdentifier>{77d93ace-7de1-44be-b354-d5c47223b249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Util\csv_parser">
+      <UniqueIdentifier>{3627b37f-418d-47bb-b216-2a4e8a00fb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Util\csv_parser">
+      <UniqueIdentifier>{cef9e0fb-2e6b-4dff-9228-0f15dc3ab1a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerLibrary.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Type.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Util.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\RandomMt.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Singleton.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Clock.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\tinyXml\tinystr.h">
+      <Filter>헤더 파일\Util\tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\tinyXml\tinyxml.h">
+      <Filter>헤더 파일\Util\tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Config.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Lock.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Thread.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Logger.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Assert.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Minidump.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SMTPMail.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ThreadJobQueue.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Table.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\MemoryLeak.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Memory_LowFragmentationHeap.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\csv_parser\csv_parser.hpp">
+      <Filter>헤더 파일\Util\csv_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\GameObject.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Monitoring.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Task.h">
+      <Filter>헤더 파일\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Clock.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxmlerror.cpp">
+      <Filter>소스 파일\Util\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp">
+      <Filter>소스 파일\Util\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinystr.cpp">
+      <Filter>소스 파일\Util\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxml.cpp">
+      <Filter>소스 파일\Util\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Config.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Lock.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Thread.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Logger.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Assert.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Minidump.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SMTPMail.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\csv_parser\csv_parser.cpp">
+      <Filter>소스 파일\Util\csv_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Task.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
