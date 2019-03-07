@@ -48,7 +48,7 @@ typedef void (*Function)(void *);
 #include "./Util/csv_parser/csv_parser.hpp"
 #include "./Util/tinyXml/tinyxml.h"
 
-// TODO: 필수 헤더
+// 필수 헤더
 //#include "./Net/WinSocket.h"
 #include "./Util/Type.h"
 #include "./Util/Util.h"
@@ -76,29 +76,29 @@ typedef void (*Function)(void *);
 #include "./Util/Monitoring.h"
 
 // 패킷
-//#include "./Net/Packet/Stream.h"
-//#include "./Net/Packet/PacketHeader.h"
-//#include "./Net/Packet/PacketClass.h"
-//#include "./Net/Packet/PacketAnalyzer.h"
-//#include "./Net/Packet/PacketFactory.h"
-//#include "./Net/Packet/Package.h"
+#include "./Net/Packet/Stream.h"
+#include "./Net/Packet/PacketHeader.h" //from Generator
+#include "./Net/Packet/PacketClass.h" //from Generator
+#include "./Net/Packet/PacketAnalyzer.h"
+#include "./Net/Packet/PacketFactory.h" //from Generator
+#include "./Net/Packet/Package.h"
 
 // 콘텐츠
-//#include "./Contents/ContentsProcess.h"
+#include "./Contents/ContentsProcess.h"
 
 // 서버
-//#include "./Net/Session.h"
-//#include "./Net/SessionManager.h"
-//#include "./Net/Server.h"
+#include "./Net/Session.h"
+#include "./Net/SessionManager.h"
+#include "./Net/Server.h"
 
-//#include "./Net/Iocp/IOCPServer.h"
-//#include "./Net/Iocp/IOCPSession.h"
-//#include "./Net/SessionMonitor.h"
+#include "./Net/Iocp/IOCPServer.h"
+#include "./Net/Iocp/IOCPSession.h"
+#include "./Net/SessionMonitor.h"
 
 // 터미널
-//#include "./Net/Terminal/TerminalSession.h"
-//#include "./Net/Terminal/Terminal.h"
-//#include "./Net/Terminal/TerminalManager.h"
+#include "./Net/Terminal/TerminalSession.h"
+#include "./Net/Terminal/Terminal.h"
+#include "./Net/Terminal/TerminalManager.h"
 
 // DB
 //#include "./Database/ADODatabase.h"
@@ -106,4 +106,4 @@ typedef void (*Function)(void *);
 //#include "./Database/DBManager.h"
 
 // 전역변수
-#include <Shutdown.h>
+#include "Shutdown.h"

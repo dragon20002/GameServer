@@ -15,7 +15,7 @@ public:
 		init = true;
 
 		ULONG HeapFragValue = 2;
-		HANDLE hHeaps[180];
+		HANDLE hHeaps[100];
 		DWORD dwHeapCount = GetProcessHeaps(100, hHeaps);
 
 		for (DWORD i = 0; i < dwHeapCount; i++) {

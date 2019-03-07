@@ -90,6 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,6 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +121,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +139,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,7 +151,25 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Contents\ContentsProcess.h" />
+    <ClInclude Include="LoginProcess.h" />
+    <ClInclude Include="Net\Iocp\IOCPServer.h" />
+    <ClInclude Include="Net\Iocp\IOCPSession.h" />
+    <ClInclude Include="Net\Packet\Package.h" />
+    <ClInclude Include="Net\Packet\PacketAnalyzer.h" />
+    <ClInclude Include="Net\Packet\PacketClass.h" />
+    <ClInclude Include="Net\Packet\PacketFactory.h" />
+    <ClInclude Include="Net\Packet\PacketHeader.h" />
+    <ClInclude Include="Net\Packet\Stream.h" />
+    <ClInclude Include="Net\Server.h" />
+    <ClInclude Include="Net\Session.h" />
+    <ClInclude Include="Net\SessionManager.h" />
+    <ClInclude Include="Net\SessionMonitor.h" />
+    <ClInclude Include="Net\Terminal\Terminal.h" />
+    <ClInclude Include="Net\Terminal\TerminalManager.h" />
+    <ClInclude Include="Net\Terminal\TerminalSession.h" />
     <ClInclude Include="ServerLibrary.h" />
+    <ClInclude Include="Shutdown.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Util\Assert.h" />
@@ -174,6 +196,18 @@
     <ClInclude Include="Util\Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Contents\ContentsProcess.cpp" />
+    <ClCompile Include="LoginProcess.cpp" />
+    <ClCompile Include="Net\Iocp\IOCPServer.cpp" />
+    <ClCompile Include="Net\Iocp\IOCPSession.cpp" />
+    <ClCompile Include="Net\Packet\Stream.cpp" />
+    <ClCompile Include="Net\Server.cpp" />
+    <ClCompile Include="Net\Session.cpp" />
+    <ClCompile Include="Net\SessionManager.cpp" />
+    <ClCompile Include="Net\SessionMonitor.cpp" />
+    <ClCompile Include="Net\Terminal\Terminal.cpp" />
+    <ClCompile Include="Net\Terminal\TerminalManager.cpp" />
+    <ClCompile Include="Net\Terminal\TerminalSession.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

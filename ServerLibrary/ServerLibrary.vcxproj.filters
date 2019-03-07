@@ -31,6 +31,36 @@
     <Filter Include="헤더 파일\Util\csv_parser">
       <UniqueIdentifier>{cef9e0fb-2e6b-4dff-9228-0f15dc3ab1a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Net">
+      <UniqueIdentifier>{bba36ae5-4dc2-4135-b1a1-3075ebcc0746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Net">
+      <UniqueIdentifier>{35936b52-2b4c-428f-9861-6b0bd545e859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Net\Iocp">
+      <UniqueIdentifier>{fadda746-a164-4fa2-831f-3f15c037abb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Net\Iocp">
+      <UniqueIdentifier>{f671f35b-c5cd-4451-8f0a-8954aad41e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Net\Terminal">
+      <UniqueIdentifier>{124a1e55-b357-47b5-b94f-bb4e7023a84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Net\Terminal">
+      <UniqueIdentifier>{5bcf650e-03c4-4878-9c04-c7079cfd1173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Net\Packet">
+      <UniqueIdentifier>{dc6d6482-fa8d-4935-ace7-c996fbd9bd97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Net\Packet">
+      <UniqueIdentifier>{f91381eb-180d-4db3-a991-24a536f97f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Contents">
+      <UniqueIdentifier>{39b248b6-c2a0-45e2-92bf-1ba8c45d97d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Contents">
+      <UniqueIdentifier>{604c12a4-7383-4e25-8c7a-5b05c114a567}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -111,6 +141,60 @@
     <ClInclude Include="Util\Task.h">
       <Filter>헤더 파일\Util</Filter>
     </ClInclude>
+    <ClInclude Include="Net\Server.h">
+      <Filter>헤더 파일\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Session.h">
+      <Filter>헤더 파일\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SessionManager.h">
+      <Filter>헤더 파일\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Iocp\IOCPServer.h">
+      <Filter>헤더 파일\Net\Iocp</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Iocp\IOCPSession.h">
+      <Filter>헤더 파일\Net\Iocp</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SessionMonitor.h">
+      <Filter>헤더 파일\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\TerminalSession.h">
+      <Filter>헤더 파일\Net\Terminal</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\Terminal.h">
+      <Filter>헤더 파일\Net\Terminal</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\TerminalManager.h">
+      <Filter>헤더 파일\Net\Terminal</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\Stream.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\PacketAnalyzer.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\Package.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Contents\ContentsProcess.h">
+      <Filter>헤더 파일\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\PacketClass.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\PacketFactory.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Packet\PacketHeader.h">
+      <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -157,6 +241,42 @@
     </ClCompile>
     <ClCompile Include="Util\Task.cpp">
       <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Server.cpp">
+      <Filter>소스 파일\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Iocp\IOCPServer.cpp">
+      <Filter>소스 파일\Net\Iocp</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Session.cpp">
+      <Filter>소스 파일\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Iocp\IOCPSession.cpp">
+      <Filter>소스 파일\Net\Iocp</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SessionManager.cpp">
+      <Filter>소스 파일\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SessionMonitor.cpp">
+      <Filter>소스 파일\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\TerminalSession.cpp">
+      <Filter>소스 파일\Net\Terminal</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\Terminal.cpp">
+      <Filter>소스 파일\Net\Terminal</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\TerminalManager.cpp">
+      <Filter>소스 파일\Net\Terminal</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Packet\Stream.cpp">
+      <Filter>소스 파일\Net\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Contents\ContentsProcess.cpp">
+      <Filter>소스 파일\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginProcess.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
