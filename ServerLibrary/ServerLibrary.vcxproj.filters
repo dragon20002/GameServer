@@ -177,9 +177,6 @@
     <ClInclude Include="Net\Packet\Package.h">
       <Filter>헤더 파일\Net\Packet</Filter>
     </ClInclude>
-    <ClInclude Include="Shutdown.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Contents\ContentsProcess.h">
       <Filter>헤더 파일\Contents</Filter>
     </ClInclude>
@@ -194,6 +191,9 @@
     </ClInclude>
     <ClInclude Include="Net\Packet\PacketHeader.h">
       <Filter>헤더 파일\Net\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

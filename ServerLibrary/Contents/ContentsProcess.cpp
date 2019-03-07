@@ -45,8 +45,8 @@ void ContentsProcess::initialize(xml_t * config)
 
 void ContentsProcess::registDefaultPacketFunc()
 {
-	runFuncTable_.insert(make_pair(E_C_NOTIFY_HEARTBEAT, &ContentsProcess::Packet_HeartBeat));
-	runFuncTable_.insert(make_pair(E_C_NOTIFY_TERMINAL, &ContentsProcess::Packet_Notify_Terminal));
+	runFuncTable_.insert(make_pair(E_C_REQ_HEARTBEAT, &ContentsProcess::Packet_HeartBeat));
+	runFuncTable_.insert(make_pair(E_I_NOTIFY_TERMINAL, &ContentsProcess::Packet_Notify_Terminal));
 	runFuncTable_.insert(make_pair(E_C_REQ_EXIT, &ContentsProcess::Packet_Exit));
 }
 
@@ -102,7 +102,7 @@ void ContentsProcess::Packet_Notify_Terminal(Session * session, Packet * rowPack
 	SLog(L"* [%S] Terminal accepted.", session->clientAddress().c_str());
 }
 
-void ContentsProcess::Packet_Exit(Session * session, Packet * packet)
+void ContentsProcess::Packet_Exit(Session * session, Packet * rowPacket)
 {
 	// 클라이언트 read thread 를 종료하기 위한 처리
 	PK_C_REQ_EXIT *packet = (PK_C_REQ_EXIT*)rowPacket;

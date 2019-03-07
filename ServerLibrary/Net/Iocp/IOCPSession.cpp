@@ -195,7 +195,9 @@ Package* IOCPSession::onRecv(size_t transferSize)
 	packet_size_t packetDataSize = ioData_[IO_READ].totalByte() - sizeof(packet_size_t);
 	Byte *packetData = (Byte*)ioData_[IO_READ].data() + offset;
 
-	PacketObfuscation::getInstance().decoding(packetData, packetDataSize);
+	// TODO 패킷 복호화
+	//PacketObfuscation::getInstance().decoding(packetData, packetDataSize);
+
 	Packet *packet = PacketAnalyzer::getInstance().analyzer((const char*)packetData, packetDataSize);
 	if (packet == nullptr) {
 		SLog(L"! invalid packet");

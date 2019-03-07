@@ -59,7 +59,7 @@ SERVER_STATUS &Server::status()
 	return status_;
 }
 
-void putPackage(Package *package)
+void Server::putPackage(Package *package)
 {
 	contentsProcess_->putPackage(package);
 }

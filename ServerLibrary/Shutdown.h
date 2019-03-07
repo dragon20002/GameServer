@@ -2,7 +2,7 @@
 
 static bool _shutdown = false;
 
-void shutdownServer()
+static void shutdownServer()
 {
 	_shutdown = true;
 

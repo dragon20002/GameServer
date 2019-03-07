@@ -2,7 +2,13 @@
 #include "SessionManager.h"
 #include "Iocp/IOCPServer.h"
 
-SessionManager::SessionManager(int maxConnection = SESSION_CAPACITY)
+SessionManager::SessionManager()
+	:lock_(L"SessionManager")
+{
+	SessionManager(SESSION_CAPACITY);
+}
+
+SessionManager::SessionManager(int maxConnection)
 	:lock_(L"SessionManager")
 {
 	idSeed_ = 1;

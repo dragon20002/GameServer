@@ -45,7 +45,7 @@ public:
 		if (size == 0) {
 			return false;
 		}
-		if (readQueue_->emepty()) {
+		if (readQueue_->empty()) {
 			this->swap();
 		}
 		t = readQueue_->front();

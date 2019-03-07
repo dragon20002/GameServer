@@ -19,6 +19,7 @@ class SessionManager :public Singleton<SessionManager>
 	map<wstr_t, cmdFunc>	serverCommand_;
 
 public:
+	SessionManager();
 	SessionManager(int maxConnection);
 	~SessionManager();
 	oid_t			createSessionId();
