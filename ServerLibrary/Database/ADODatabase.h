@@ -5,8 +5,13 @@
 #include <comutil.h>
 #include <conio.h>
 
+#if _WIN32 || _WIN64
+#if _WIN64
+#import "Common Files\system\ado\msado15.dll" rename("EOF", "EndOfFile")
+#else
 #import "\Program Files\Common Files\system\ado\msado15.dll" rename("EOF", "EndOfFile")
-
+#endif
+#endif
 #include "Database.h"
 
 typedef ADODB::_ConnectionPtr		dbConnectionPtr;
