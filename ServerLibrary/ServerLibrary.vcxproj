@@ -90,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files;C:\Program Files (x86);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files;C:\Program Files (x86);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files;C:\Program Files (x86);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +139,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files;C:\Program Files (x86);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contents\ContentsProcess.h" />
+    <ClInclude Include="Database\ADODatabase.h" />
+    <ClInclude Include="Database\Database.h" />
+    <ClInclude Include="Database\DBManager.h" />
+    <ClInclude Include="Database\Query.h" />
+    <ClInclude Include="Database\QueryRecord.h" />
+    <ClInclude Include="Database\QueryStatement.h" />
     <ClInclude Include="LoginProcess.h" />
     <ClInclude Include="Net\Iocp\IOCPServer.h" />
     <ClInclude Include="Net\Iocp\IOCPSession.h" />
@@ -197,6 +203,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Contents\ContentsProcess.cpp" />
+    <ClCompile Include="Database\ADODatabase.cpp" />
+    <ClCompile Include="Database\DBManager.cpp" />
+    <ClCompile Include="Database\Query.cpp" />
+    <ClCompile Include="Database\QueryRecord.cpp" />
+    <ClCompile Include="Database\QueryStatement.cpp" />
     <ClCompile Include="LoginProcess.cpp" />
     <ClCompile Include="Net\Iocp\IOCPServer.cpp" />
     <ClCompile Include="Net\Iocp\IOCPSession.cpp" />

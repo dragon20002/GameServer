@@ -61,6 +61,12 @@
     <Filter Include="소스 파일\Contents">
       <UniqueIdentifier>{604c12a4-7383-4e25-8c7a-5b05c114a567}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Database">
+      <UniqueIdentifier>{d837f406-7f07-46ea-83d3-d43e84ca3e2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Database">
+      <UniqueIdentifier>{9771d4a5-229f-472f-bdfb-00a4db8aa8ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -195,6 +201,24 @@
     <ClInclude Include="Shutdown.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Database\QueryStatement.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\QueryRecord.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Query.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Database.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\ADODatabase.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\DBManager.h">
+      <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -277,6 +301,21 @@
     </ClCompile>
     <ClCompile Include="LoginProcess.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\QueryStatement.cpp">
+      <Filter>소스 파일\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\QueryRecord.cpp">
+      <Filter>소스 파일\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Query.cpp">
+      <Filter>소스 파일\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\ADODatabase.cpp">
+      <Filter>소스 파일\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DBManager.cpp">
+      <Filter>소스 파일\Database</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

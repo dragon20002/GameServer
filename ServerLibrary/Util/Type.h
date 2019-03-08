@@ -41,6 +41,7 @@ typedef UINT32				UInt32;
 typedef INT64				Int64;
 typedef UINT64				UInt64;
 typedef float				Float;
+typedef double				DOUBLE;
 
 // xml
 typedef TiXmlDocument		xml_t;

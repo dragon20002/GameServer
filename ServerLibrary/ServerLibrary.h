@@ -101,9 +101,9 @@ typedef void (*Function)(void *);
 #include "./Net/Terminal/TerminalManager.h"
 
 // DB
-//#include "./Database/ADODatabase.h"
-//#include "./Database/Query.h"
-//#include "./Database/DBManager.h"
+#include "./Database/ADODatabase.h"
+#include "./Database/Query.h"
+#include "./Database/DBManager.h"
 
 // 전역변수
 #include "Shutdown.h"
