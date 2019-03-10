@@ -72,7 +72,7 @@ LockSafeScope::LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo)
 	if (lock == nullptr) {
 		return;
 	}
-	if (_shutdown == true) {
+	if (_shutdown) {
 		return;
 	}
 
@@ -97,7 +97,7 @@ LockSafeScope::~LockSafeScope()
 	if (!lock_) {
 		return;
 	}
-	if (_shutdown == true) {
+	if (_shutdown) {
 		return;
 	}
 	lock_->unlock();

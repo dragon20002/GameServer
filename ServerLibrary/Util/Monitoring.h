@@ -1,21 +1,3 @@
-/**
-//활용예
-class SystemReport : public Work
-{
-	void tick()
-	{
-		Monitoring &moniter = Monitoring::getInstance();
-		SLog(L"### cpu usage : %2.2f%%, memory usage : %u byte", moniter.processCpuUsage(), moniter.processMemUsage());
-	}
-};
-void main()
-{
-	SystemReport systemReport;
-	const int MONITOR_REPORTING_SEC = 1; //1초 한번씩 (tick)
-	TaskManager::getInstance().add(&systemReport, MONITOR_REPORTING_SEC, TICK_INFINITY);
-}
-*/
-
 #pragma once
 #include "stdafx.h"
 #include "psapi.h"
@@ -55,7 +37,7 @@ public:
 
 		GetProcessTimes(self, &ftime, &ftime, &fsys, &fuser);
 		memcpy(&sys, &fsys, sizeof(FILETIME));
-		memcpy(&lastUserCPU, &fuser, sizeof(FILETIME));
+		memcpy(&user, &fuser, sizeof(FILETIME));
 		percent = (double)((sys.QuadPart - lastSysCPU.QuadPart) + (user.QuadPart - lastUserCPU.QuadPart));
 		percent /= (now.QuadPart - lastCPU.QuadPart);
 		percent /= numProcessors;

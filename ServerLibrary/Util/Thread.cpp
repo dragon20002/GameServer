@@ -51,7 +51,7 @@ void ThreadManager::put(Thread *thread)
 {
 	std::pair<size_t, Thread*> node(thread->id(), thread);
 	threadPool_.insert(node);
-	SLog(L"* create thread : id[0x&X] name[%s], pool size[%d]", thread->id(), thread->name().c_str(), threadPool_.size());
+	SLog(L"* create thread : id[0x%X] name[%s], pool size[%d]", thread->id(), thread->name().c_str(), threadPool_.size());
 }
 
 void ThreadManager::remove(size_t id)

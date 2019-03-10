@@ -44,7 +44,7 @@ void LogFile::initialize(WCHAR *logFileName)
 	fs_.open(logFileName, std::ios::out | std::ios::trunc);
 	if (fs_.bad()) {
 		printf("! logfile error, file open fail.\n");
-		assert(false);
+		ASSERT(false);
 	}
 }
 
@@ -115,7 +115,7 @@ void LogWriter::log(WCHAR *fmt, va_list args)
 		logMessage += prefix_;
 	}
 	array<WCHAR, SIZE_8 * 2> threadIdStr;
-	snwprintf(threadIdStr, L"0x%X", threadId);
+	snwprintf(threadIdStr, L"0x%zX", threadId);
 
 	logMessage += L":";
 	logMessage += threadIdStr.data();

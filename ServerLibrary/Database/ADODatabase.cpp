@@ -64,6 +64,7 @@ bool ADODatabase::connect(const WCHAR * serverName, const WCHAR * dbName, const 
 	if (this->connect(L"SQLNCLI", serverName, dbName, id, password)) {
 		return true;
 	}
+	return false;
 }
 
 bool ADODatabase::connect()
@@ -182,7 +183,7 @@ void ADODatabase::execute()
 
 void ADODatabase::process()
 {
-	while (_shutdown == false) {
+	while (!_shutdown) {
 		if (!this->connected()) {
 			SLog(L"! db[%s] connection disconnect", dbName_.c_str());
 			ASSERT(FALSE);

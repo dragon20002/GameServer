@@ -58,14 +58,14 @@ void ContentsProcess::putPackage(Package * package)
 void ContentsProcess::run(Package * package)
 {
 	PacketType type = package->packet_->type();
-	RunFunc runFunction = runFuncTable_.at(type);
-	if (runFunction == nullptr) {
+	auto runFunction = runFuncTable_.find(type);
+	if (runFunction == runFuncTable_.end()) {
 		SLog(L"! invalid packet runFunction. type[%d]", type);
 		package->session_->onClose();
 		return;
 	}
 	SLog(L"*** [%d] packet run ***", type);
-	runFunction(package->session_, package->packet_);
+	runFunction->second(package->session_, package->packet_);
 }
 
 void ContentsProcess::execute()
@@ -81,7 +81,7 @@ void ContentsProcess::execute()
 
 void ContentsProcess::process()
 {
-	while (_shutdown == false) {
+	while (!_shutdown) {
 		this->execute();
 		CONTEXT_SWITCH;
 	}

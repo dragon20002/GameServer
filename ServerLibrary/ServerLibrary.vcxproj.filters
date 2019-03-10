@@ -186,9 +186,6 @@
     <ClInclude Include="Contents\ContentsProcess.h">
       <Filter>헤더 파일\Contents</Filter>
     </ClInclude>
-    <ClInclude Include="LoginProcess.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Net\Packet\PacketClass.h">
       <Filter>헤더 파일\Net\Packet</Filter>
     </ClInclude>
@@ -197,9 +194,6 @@
     </ClInclude>
     <ClInclude Include="Net\Packet\PacketHeader.h">
       <Filter>헤더 파일\Net\Packet</Filter>
-    </ClInclude>
-    <ClInclude Include="Shutdown.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Database\QueryStatement.h">
       <Filter>헤더 파일\Database</Filter>
@@ -218,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="Database\DBManager.h">
       <Filter>헤더 파일\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -281,9 +278,6 @@
     <ClCompile Include="Net\SessionManager.cpp">
       <Filter>소스 파일\Net</Filter>
     </ClCompile>
-    <ClCompile Include="Net\SessionMonitor.cpp">
-      <Filter>소스 파일\Net</Filter>
-    </ClCompile>
     <ClCompile Include="Net\Terminal\TerminalSession.cpp">
       <Filter>소스 파일\Net\Terminal</Filter>
     </ClCompile>
@@ -299,9 +293,6 @@
     <ClCompile Include="Contents\ContentsProcess.cpp">
       <Filter>소스 파일\Contents</Filter>
     </ClCompile>
-    <ClCompile Include="LoginProcess.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Database\QueryStatement.cpp">
       <Filter>소스 파일\Database</Filter>
     </ClCompile>
@@ -316,6 +307,12 @@
     </ClCompile>
     <ClCompile Include="Database\DBManager.cpp">
       <Filter>소스 파일\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Packet\PacketAnalyzer.cpp">
+      <Filter>소스 파일\Net\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Shutdown.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

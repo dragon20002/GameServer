@@ -45,7 +45,7 @@ void Terminal::connectProcess()
 {
 CONNECT_START:
 	int tryCount = 0;
-	while (_shutdown == false) {
+	while (!_shutdown) {
 		if (session_.connectTo(ip_, port_)) {
 			break;
 		}
@@ -59,7 +59,7 @@ CONNECT_START:
 	this->sendPacket(&terminalPacket);
 
 	SLog(L"* [%s]terminal connect [%S]:[%d] ready", name_.c_str(), ip_, port_);
-	while (_shutdown == false) {
+	while (!_shutdown) {
 		Package *package = session_.onRecv(0);
 
 		if (package == nullptr) {

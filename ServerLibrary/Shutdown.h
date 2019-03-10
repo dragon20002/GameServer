@@ -1,10 +1,6 @@
 #pragma once
+#include "stdafx.h"
 
-static bool _shutdown = false;
+extern bool _shutdown;
 
-static void shutdownServer()
-{
-	_shutdown = true;
-
-	// TODO ???
-}
+void shutdownServer();

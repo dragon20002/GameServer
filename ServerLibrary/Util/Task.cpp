@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Task.h"
 
-
 TaskNode::TaskNode(Work *workObject, int freqSec, int durationSec)
 {
 	workObject_ = workObject;
@@ -98,13 +97,6 @@ TaskManager::TaskManager()
 	this->initialize(&config);
 }
 
-TaskManager::~TaskManager()
-{
-	for (auto task : taskPool_) {
-		SAFE_DELETE(task);
-	}
-}
-
 void TaskManager::initialize(xml_t *config)
 {
 	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Task");
@@ -121,6 +113,13 @@ void TaskManager::initialize(xml_t *config)
 		task->run();
 	}
 	SLog(L"* task thread, [%d] maked", threadCount_);
+}
+
+TaskManager::~TaskManager()
+{
+	for (auto task : taskPool_) {
+		SAFE_DELETE(task);
+	}
 }
 
 void TaskManager::add(Work *workObject, int freqSec, int durationSec)

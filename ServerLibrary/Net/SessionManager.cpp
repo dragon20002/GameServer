@@ -5,7 +5,9 @@
 SessionManager::SessionManager()
 	:lock_(L"SessionManager")
 {
-	SessionManager(SESSION_CAPACITY);
+	idSeed_ = 1;
+	maxConnection_ = SESSION_CAPACITY;
+	this->commandFuncInitialize();
 }
 
 SessionManager::SessionManager(int maxConnection)
@@ -108,9 +110,11 @@ Session *SessionManager::session(oid_t id)
 
 void SessionManager::runCommand(wstr_t cmdLine)
 {
+
 	std::size_t found = cmdLine.find(L' ');
 	wstr_t command;
 	wstr_t arg;
+
 	if (found != wstr_t::npos) {
 		command = cmdLine.substr(0, found);
 		arg = cmdLine.substr(found);
@@ -119,9 +123,9 @@ void SessionManager::runCommand(wstr_t cmdLine)
 		command = cmdLine;
 	}
 
-	auto cmdFunc = serverCommand_.at(command);
-	if (cmdFunc) {
-		cmdFunc(&sessionList_, &arg);
+	auto cmdFunc = serverCommand_.find(command);
+	if (cmdFunc != serverCommand_.end()) {
+		cmdFunc->second(&sessionList_, &arg);
 	}
 }
 
@@ -176,7 +180,7 @@ void SessionManager::commandFuncInitialize()
 	};
 
 	auto exitFunc = [](SessionList *sessionList, wstr_t *arg) {
-		_shutdown = true;
+		shutdownServer();
 	};
 
 	// 명령어 등록

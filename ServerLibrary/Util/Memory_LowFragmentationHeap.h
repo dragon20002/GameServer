@@ -32,30 +32,31 @@ class TestObject
 {
 	int a[1024];
 	char b[1024];
-};
 
-void testCode()
-{
-	int count = 10080808;
-	LARGE_INTEGER startTick, endTick, frequency;
-	QueryPerformanceFrequency(&frequency);
-	QueryPerformanceCounter(&startTick);
+	void test()
+	{
+		int count = 10080808;
+		LARGE_INTEGER startTick, endTick, frequency;
+		QueryPerformanceFrequency(&frequency);
+		QueryPerformanceCounter(&startTick);
 
-	for (int i = 0; i < count; i++) {
-		TestObject *obj = new TestObject();
-		delete obj;
+		for (int i = 0; i < count; i++) {
+			TestObject *obj = new TestObject();
+			delete obj;
+		}
+
+		QueryPerformanceCounter(&endTick);
+		printf("Time : %lf\n", (double)(endTick.QuadPart - startTick.QuadPart) / (double)frequency.QuadPart);
 	}
 
-	QueryPerformanceCounter(&endTick);
-	printf("Time : %lf\n", (double)(endTick.QuadPart - startTick.QuadPart) / (double)frequency.QuadPart);
-}
+	//int _tmain(int argc, _TCHAR* argv[])
+	//{
+	//  TestObject testObj;
+	//	testObj.test();
 
-//int _tmain(int argc, _TCHAR* argv[])
-//{
-//	testCode();
+	//	LowFragmentationHeap lfh;
+	//	testObj.test();
 
-//	onLFH();
-//	testCode();
-
-//	return 0;
-//}
+	//	return 0;
+	//}
+};

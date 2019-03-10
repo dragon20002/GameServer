@@ -15,7 +15,7 @@ typedef BOOL(WINAPI *WRITEDUMP) (
 	_In_ PMINIDUMP_CALLBACK_INFORMATION    CallbackParam
 	);
 
-class MiniDump :public Singleton<MiniDump>
+class MiniDump : public Singleton<MiniDump>
 {
 public:
 	MiniDump();

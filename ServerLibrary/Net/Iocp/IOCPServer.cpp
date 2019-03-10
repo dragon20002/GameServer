@@ -48,6 +48,12 @@ bool IOCPServer::createListenSocket()
 
 bool IOCPServer::run() //listen, accept, worker thread »ý¼º
 {
+	WSADATA wsaData;
+	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+		SErrLog(L"! Fail to start Window Socket API");
+		return false;
+	}
+
 	if (MAX_IOCP_THREAD < workerThreadCount_) {
 		SErrLog(L"! workerThread limit[%d], but config setting [%d]", MAX_IOCP_THREAD, workerThreadCount_);
 		return false;

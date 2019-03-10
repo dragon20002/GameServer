@@ -2,10 +2,10 @@
 #include "stdafx.h"
 
 // 터미널 쓰레드, 타 서버와 연결하여 데이터 송수신에 사용
-typedef enum TERMINAL_STATUS {
+typedef enum {
 	TERMINAL_STOP,
 	TERMINAL_READY
-};
+}TERMINAL_STATUS;
 
 class Server;
 class Terminal
