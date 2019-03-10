@@ -24,21 +24,21 @@ namespace PacketMaker
                 const int titleIdx = 0;
                 const int parseIdx = 1;
                 string parseToken = row[titleIdx].ToString();
-                if (parseToken.CompareTo("header_") == 0)
+                if (parseToken.CompareTo("header") == 0)
                     header_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("classHeader_") == 0)
+                else if (parseToken.CompareTo("classHeader") == 0)
                     classHeader_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("classTailer_") == 0)
+                else if (parseToken.CompareTo("classTailer") == 0)
                     classTailer_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("encodeFuncHead_") == 0)
+                else if (parseToken.CompareTo("encodeFuncHead") == 0)
                     encodeFuncHead_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("encodeFunction_") == 0)
+                else if (parseToken.CompareTo("encodeFunction") == 0)
                     encodeFunction_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("decodeFuncHead_") == 0)
+                else if (parseToken.CompareTo("decodeFuncHead") == 0)
                     decodeFuncHead_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("decodeFunction_") == 0)
+                else if (parseToken.CompareTo("decodeFunction") == 0)
                     decodeFunction_ = row[parseIdx].ToString();
-                else if (parseToken.CompareTo("tailer_") == 0)
+                else if (parseToken.CompareTo("tailer") == 0)
                     tailer_ = row[parseIdx].ToString();
             }
         }
@@ -122,7 +122,7 @@ namespace PacketMaker
                 }
                 else
                 {
-                    parseStr += tab_ + tab_ + "public" + token;
+                    parseStr += tab_ + tab_ + "public " + token;
                     parseStr += " ";
                 }
             }

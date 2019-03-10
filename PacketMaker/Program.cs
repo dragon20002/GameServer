@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PacketMaker
 {
@@ -12,8 +8,8 @@ namespace PacketMaker
         static string serverProjectName_ = "\\ServerCore\\ServerLibrary";
         static string serverProjectPath_ = patch_ + serverProjectName_ + "\\Net\\Packet";
 
-        static string clientProjectName_ = "\\DummyClient";
-        static string clientProjectPath_ = patch_ + clientProjectName_ + "\\Source\\PacketGen";
+        static string clientProjectName_ = "\\ServerCore\\DummyClient";
+        static string clientProjectPath_ = patch_ + clientProjectName_ + "\\Packet\\PacketGen";
 
         static string excelPath_ = patch_ + "\\ServerCore\\PacketRule.xlsx";
         static string dataSheet_ = "PacketData";
